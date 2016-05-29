@@ -21,11 +21,9 @@ public class GgikkoApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         this.injectorCreator = makeInjectorCreator();
-
+        inject();
     }
-
 
     /** initiate injector */
     protected InjectorCreator makeInjectorCreator() {

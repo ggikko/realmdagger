@@ -1,5 +1,6 @@
 package ggikko.me.daggerrealmtestapp.dagger.module;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -19,6 +20,13 @@ public class GgikkoApplicationModule {
 
     public GgikkoApplicationModule(GgikkoApplication mGgikkoApplication){
         this.mGgikkoApplication = mGgikkoApplication;
+    }
+
+
+    @Provides
+    @Singleton
+    public Context applicationContext() {
+        return mGgikkoApplication.getApplicationContext();
     }
 
     @Provides

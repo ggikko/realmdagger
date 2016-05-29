@@ -9,7 +9,7 @@ public class ApplicationInjector {
 //    private ApplicationInjector(){}
 
     @Getter
-    private final GgikkoApplicationComponent applicationComponent;
+    private static GgikkoApplicationComponent applicationComponent;
 
     public ApplicationInjector(GgikkoApplicationComponent applicationComponent) {
         this.applicationComponent = applicationComponent;

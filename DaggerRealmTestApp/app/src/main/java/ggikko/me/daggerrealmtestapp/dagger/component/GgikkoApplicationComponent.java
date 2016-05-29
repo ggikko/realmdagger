@@ -5,6 +5,8 @@ import javax.inject.Singleton;
 import dagger.Component;
 import ggikko.me.daggerrealmtestapp.GgikkoApplication;
 import ggikko.me.daggerrealmtestapp.dagger.module.GgikkoApplicationModule;
+import ggikko.me.daggerrealmtestapp.dagger.module.RepositoryModule;
+import ggikko.me.daggerrealmtestapp.repository.DatabaseRealm;
 
 /**
  * Created by admin on 16. 5. 29..
@@ -12,7 +14,8 @@ import ggikko.me.daggerrealmtestapp.dagger.module.GgikkoApplicationModule;
 
 
 @Singleton
-@Component(modules = GgikkoApplicationModule.class)
+@Component(modules = {GgikkoApplicationModule.class, RepositoryModule.class})
 public interface GgikkoApplicationComponent {
     void inject(GgikkoApplication application);
+    void inject(DatabaseRealm databaseRealm);
 }
