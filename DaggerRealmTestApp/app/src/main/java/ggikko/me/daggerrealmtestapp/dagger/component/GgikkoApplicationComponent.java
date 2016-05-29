@@ -7,6 +7,7 @@ import ggikko.me.daggerrealmtestapp.GgikkoApplication;
 import ggikko.me.daggerrealmtestapp.dagger.module.GgikkoApplicationModule;
 import ggikko.me.daggerrealmtestapp.dagger.module.RepositoryModule;
 import ggikko.me.daggerrealmtestapp.repository.DatabaseRealm;
+import ggikko.me.daggerrealmtestapp.ui.MainActivity;
 
 /**
  * Created by admin on 16. 5. 29..
@@ -18,4 +19,5 @@ import ggikko.me.daggerrealmtestapp.repository.DatabaseRealm;
 public interface GgikkoApplicationComponent {
     void inject(GgikkoApplication application);
     void inject(DatabaseRealm databaseRealm);
+    void inject(MainActivity mainActivity);
 }
