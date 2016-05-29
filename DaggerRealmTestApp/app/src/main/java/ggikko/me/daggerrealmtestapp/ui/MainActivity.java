@@ -28,18 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.e(TAG,"onCreate");
 
-//        Code newCode1 = new Code(1, "haha1");
-//        Code newCode2 = new Code(2, "haha2");
-//        Code newCode3 = new Code(3, "haha3");
+        Code newCode1 = new Code(1, "haha1");
+        Code newCode2 = new Code(2, "haha2");
+        Code newCode3 = new Code(3, "haha3");
 
         ((GgikkoApplication)getApplication()).getGgikkoApplicationComponent().inject(this);
 
 //        ((GgikkoApplication)getApplication()).getInjectorCreator().
 //        ApplicationInjector.getApplicationComponent().inject(MainActivity.this);
 
-//        databaseRealm.add(newCode1);
-//        databaseRealm.add(newCode2);
-//        databaseRealm.add(newCode3);
+        databaseRealm.add(newCode1);
+        databaseRealm.add(newCode2);
+        databaseRealm.add(newCode3);
     }
 
     @Override
@@ -51,5 +51,7 @@ public class MainActivity extends AppCompatActivity {
         for(Code code : all){
             Log.e(TAG, "id : " + code.getId() + " code : " + code.getCode());
         }
+
+
     }
 }

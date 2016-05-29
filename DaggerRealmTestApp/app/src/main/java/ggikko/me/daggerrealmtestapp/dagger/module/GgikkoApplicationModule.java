@@ -22,7 +22,6 @@ public class GgikkoApplicationModule {
         this.mGgikkoApplication = mGgikkoApplication;
     }
 
-
     @Provides
     @Singleton
     public Context applicationContext() {
