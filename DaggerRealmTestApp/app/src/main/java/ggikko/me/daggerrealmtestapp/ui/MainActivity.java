@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 //            Log.e(TAG, "id : " + code.getId() + " code : " + code.getCode());
                 }
                 result.setText(stringBuffer.toString());
+                Log.e("ggikko","get");
                 break;
             }
             case R.id.add :{
@@ -51,16 +52,23 @@ public class MainActivity extends AppCompatActivity {
                 databaseRealm.add(newCode1);
                 databaseRealm.add(newCode2);
                 databaseRealm.add(newCode3);
+                Log.e("ggikko","add");
+
                 break;
             }
 
             case R.id.delete :{
                 databaseRealm.deleteAll(Code.class);
+                Log.e("ggikko","delete");
+
                 break;
             }
 
             case R.id.result_clear:{
                 result.setText("");
+                stringBuffer.setLength(0);
+                Log.e("ggikko","clear");
+
                 break;
             }
         }

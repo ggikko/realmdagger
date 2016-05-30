@@ -47,7 +47,10 @@ public class DatabaseRealm {
     }
 
     public <T extends RealmObject> void deleteAll(Class<T> clazz) {
-        getRealmInstance().delete(clazz);
+        Realm realm = getRealmInstance();
+        realm.beginTransaction();
+        realm.delete(clazz);
+        realm.commitTransaction();
     }
 
 
