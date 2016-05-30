@@ -45,4 +45,10 @@ public class DatabaseRealm {
     public <T extends RealmObject> List<T> findAll(Class<T> clazz) {
         return getRealmInstance().where(clazz).findAll();
     }
+
+    public <T extends RealmObject> void deleteAll(Class<T> clazz) {
+        getRealmInstance().delete(clazz);
+    }
+
+
 }
